@@ -1,0 +1,60 @@
+{
+  "host": "pimpmykeyboard.com",
+  "pseudoUrls": {
+    "category": [
+      "/all-products/keycaps/[.*]"
+    ],
+    "product": [
+      "/[.+]/"
+    ]
+  },
+  "startUrls": [
+    "https://pimpmykeyboard.com"
+  ],
+  "selectors": {
+    "categories": {
+      "selector": "#ProductBreadcrumb a",
+      "position": null,
+      "attribute": null,
+      "match": null
+    },
+    "sku": {
+      "selector": "input[name=product_id][value]",
+      "position": 1,
+      "attribute": "value",
+      "match": null
+    },
+    "title": {
+      "selector": "div.DetailRow",
+      "position": 1,
+      "attribute": null,
+      "match": null
+    },
+    "description": {
+      "selector": "div.collapsible-content__inner.rte",
+      "position": 1,
+      "attribute": null,
+      "match": null
+    },
+    "price": {
+      "selector": "span.ProductPrice.VariationProductPrice[itemprop=price]",
+      "position": 1,
+      "attribute": null,
+      "match": {
+        "regex": "(?<![\\d,.])\\d{1,3}(,\\d{3})*(\\.(\\d+))?(?![\\d,.]+)",
+        "group": 1
+      }
+    },
+    "images": {
+      "selector": ".ProductThumb img[src]",
+      "position": null,
+      "attribute": "src",
+      "match": null
+    }
+  },
+  "categories": {
+    "keycap": [
+      "KeyCaps"
+    ]
+  }
+}

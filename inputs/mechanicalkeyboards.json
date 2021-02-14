@@ -1,0 +1,73 @@
+{
+  "host": "mechanicalkeyboards.com",
+  "currency": "USD",
+  "pseudoUrls": {
+    "category": [
+      "/shop/index.php?l=product_list&c=[\\d+]"
+    ],
+    "product": [
+      "/shop/index.php?l=product_detail&p=[\\d+]"
+    ]
+  },
+  "startUrls": [
+    "https://mechanicalkeyboards.com/shop/"
+  ],
+  "selectors": {
+    "categories": {
+      "selector": "li.trail-item a",
+      "position": null,
+      "attribute": null,
+      "match": null
+    },
+    "sku": {
+      "selector": "div.product-id span.id",
+      "position": 1,
+      "attribute": null,
+      "match": null
+    },
+    "title": {
+      "selector": "h4.name",
+      "position": 1,
+      "attribute": null,
+      "match": null
+    },
+    "description": {
+      "selector": "div.ldesc_fulldesc",
+      "position": 1,
+      "attribute": null,
+      "match": null
+    },
+    "price": {
+      "selector": "#product_price",
+      "position": 1,
+      "attribute": null,
+      "match": {
+        "regex": "(?<![\\d,.])\\d{1,3}(,\\d{3})*(\\.(\\d+))?(?![\\d,.]+)",
+        "group": 1
+      }
+    },
+    "images": {
+      "selector": "section.flat-product-detail.product-info a[data-lightbox] img[src]",
+      "position": null,
+      "attribute": "src",
+      "match": null
+    }
+  },
+  "categories": {
+    "pcb": [
+      "PCB"
+    ],
+    "switch": [
+      "Switches"
+    ],
+    "case": [
+      "Cases & Frames"
+    ],
+    "plate": [
+      "Plates"
+    ],
+    "keycap": [
+      "Keycaps"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "host": "kprepublic.com",
+  "currency": "USD",
+  "pseudoUrls": {
+    "category": [
+      "/collections/[(?!.*products)(?!.*youtube).+]"
+    ],
+    "product": [
+      "/collections/[.+]/products/[(?!.*youtube)(?!https).+]"
+    ]
+  },
+  "startUrls": [
+    "https://kprepublic.com/collections/pcb",
+    "https://kprepublic.com/collections/switch",
+    "https://kprepublic.com/collections/case",
+    "https://kprepublic.com/collections/plate",
+    "https://kprepublic.com/collections/keycaps"
+  ],
+  "selectors": {
+    "categories": {
+      "selector": ".breadcrumb a",
+      "position": null,
+      "attribute": "href",
+      "match": {
+        "regex": "/collections/(.*)",
+        "group": 2
+      }
+    },
+    "sku": {
+      "selector": "div.item-reviews[data-product-id]",
+      "position": 1,
+      "attribute": "data-product-id",
+      "match": null
+    },
+    "title": {
+      "selector": "h1.product-single__title",
+      "position": 1,
+      "attribute": null,
+      "match": null
+    },
+    "description": {
+      "selector": "div#tabs1.tab-pane.fade.in.active",
+      "position": 1,
+      "attribute": null,
+      "match": null
+    },
+    "price": {
+      "selector": "span#ProductPrice-product-template[itemprop=price]",
+      "position": 1,
+      "attribute": "content",
+      "match": null
+    },
+    "images": {
+      "selector": "div.product-img-box.product-single__image.grid__item.product-single__photos img[src]",
+      "position": null,
+      "attribute": "src",
+      "match": null
+    }
+  },
+  "categories": {
+    "pcb": [
+      "pcb"
+    ],
+    "switch": [
+      "switch"
+    ],
+    "case": [
+      "case"
+    ],
+    "plate": [
+      "plate"
+    ],
+    "keycap": [
+      "keycaps",
+      "abs-back-lit-keycaps",
+      "pbt-back-lit-keycaps",
+      "common-abs-keycaps",
+      "common-pbt-keycaps",
+      "abs-double-shot-keycaps",
+      "pbt-double-shot-keycaps",
+      "pbt-dye-sub-keycaps",
+      "pbt-dip-dyed-keycaps",
+      "loop-doubleshot-dip-dye-keycaps",
+      "metal-keycaps",
+      "3d-printing-keycaps",
+      "blank-keycaps",
+      "zomo-keycap"
+    ]
+  }
+}
